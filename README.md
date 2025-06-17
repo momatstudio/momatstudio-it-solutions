@@ -20,6 +20,18 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+# Momatstudio IT Solutions
+
+## Development
+
+To start the development server and enable hot reloading, run:
+
+```bash
+npm run dev
+```
+
+This will start the Next.js development server and your changes will be reflected in real-time as you save your files.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
