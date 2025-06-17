@@ -16,7 +16,7 @@ interface Props {
 
 export const Navbar = ({ scrolled }: Props) => {
   return (
-    <div className="flex justify-between py-2 h-16">
+    <div className="flex items-center justify-between py-2 h-16">
       {/* 1. logo */}
       <Link href="/">
         <Image
