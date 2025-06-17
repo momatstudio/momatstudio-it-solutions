@@ -1,4 +1,3 @@
-import React from "react";
 interface SingleExploreProps {
   item: {
     id: number;
@@ -8,7 +7,7 @@ interface SingleExploreProps {
   index: number;
 }
 
-const SingleExplore: React.FC<SingleExploreProps> = ({ item, index }) => {
+const SingleExplore: React.FC<SingleExploreProps> = ({ item }) => {
   return (
     <div className="flex flex-col justify-center items-center px-28 h-40 cursor-pointer">
       <div className="flex absolute justify-center items-center text-white h-20 w-20 bg-blue-800 rounded-full my-5 hover:w-24 hover:h-24 ease-in duration-300">

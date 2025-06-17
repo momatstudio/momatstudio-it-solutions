@@ -1,5 +1,4 @@
 import React from "react";
-import Spacer from "../spacer/Spacer";
 import Nav from "../nav/Nav";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook, FaLinkedinIn } from "react-icons/fa";

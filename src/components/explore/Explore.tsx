@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import SingleExplore from "./SingleExplore";
 
 const Explore = () => {
-  const [exploreData, setExploreData] = useState(explore);
+  const [exploreData] = useState(explore);
 
   return (
     <div className="bg-white" style={{ borderRadius: "0 0 0 150px" }}>
@@ -14,7 +14,7 @@ const Explore = () => {
 
       <div className="flex flex-wrap justify-center pb-32">
         {exploreData.map((item, index) => (
-          <SingleExplore item={item} index={index} />
+          <SingleExplore key={index} item={item} index={index} />
         ))}
       </div>
     </div>

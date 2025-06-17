@@ -14,7 +14,7 @@ import Spacer from "@/components/spacer/Spacer";
 import TwoSectionFullDisplayExtended from "@/components/two-section-full-display-extended/TwoSectionFullDisplayExtended";
 import Containers from "@/components/containers/Containers";
 import Testimonials from "@/components/testimonials/Testimonials";
-import Blog from "@/components/blog/Blog";
+// import Blog from "@/components/blog/Blog";
 import Contact from "@/components/contact/Contact";
 
 export const metadata: Metadata = {

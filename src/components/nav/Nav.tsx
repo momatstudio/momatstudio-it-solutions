@@ -15,7 +15,7 @@ interface NavProps {
   hidden?: string;
 }
 
-export default function Nav({ navList, color, size, hidden }: NavProps) {
+export default function Nav({ navList, color, size }: NavProps) {
   return (
     <ul
       className={`flex lg:justify-between md:items-center cursor-pointer gap-4 text-${color} `}

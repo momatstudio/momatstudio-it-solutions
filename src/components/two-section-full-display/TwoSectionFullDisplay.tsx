@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { FaPaintbrush } from "react-icons/fa6";
 import { MdMiscellaneousServices } from "react-icons/md";

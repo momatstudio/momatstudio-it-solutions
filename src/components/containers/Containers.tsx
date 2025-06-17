@@ -1,6 +1,4 @@
 import React from "react";
-import Button from "../Button/Button";
-import Image from "next/image";
 import Container from "./Container";
 
 export default function Containers() {

@@ -1,12 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { coverSlides } from "@/utils/data";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { colors } from "../../utils/styles";
 import SingleCover from "@components/cover/SingleCover";
 
 const Cover = () => {
-  const [slideInfo, setSlideInfo] = useState(coverSlides);
+  const [slideInfo] = useState(coverSlides);
   const [count, setCount] = useState(1);
   const [slideAutomation, setSlideAutomation] = useState(true);
 

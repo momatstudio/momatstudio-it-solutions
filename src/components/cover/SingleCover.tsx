@@ -1,4 +1,3 @@
-import react from "react";
 import Button from "../Button/Button";
 import { colors } from "@/utils/styles";
 
