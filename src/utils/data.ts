@@ -221,7 +221,7 @@ export const stats = [
   {
     title: "45+",
     subTitle: "Happy customers",
-    borderStyle: "border-r",
+    borderStyle: "r",
   },
   {
     title: "5k+",
@@ -232,7 +232,7 @@ export const stats = [
   {
     title: "4.8",
     subTitle: "Review rate",
-    borderStyle: "border-l",
+    borderStyle: "l",
   },
 ];
 export const explore = [

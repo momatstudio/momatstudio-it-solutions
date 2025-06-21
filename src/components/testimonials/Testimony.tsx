@@ -1,6 +1,7 @@
 import { colors } from "@/utils/styles";
 import React from "react";
 import { BsStarFill } from "react-icons/bs";
+import Line from "../line/Line";
 
 interface TestimonyProps {
   item: {
@@ -28,6 +29,9 @@ export default function Testimony({ item }: TestimonyProps) {
         </div>
         <p className="text-sm text-[#4a5155]">{item.ceoName}</p>
         <p className="text-sm font-semibold">{item.position}</p>
+      </div>
+      <div className="lg:hidden">
+        <Line darkTheme={true} height={1} width={"100%"} />
       </div>
     </div>
   );

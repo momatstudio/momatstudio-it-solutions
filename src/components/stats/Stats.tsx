@@ -8,7 +8,7 @@ export default function Stats() {
         {stats.map((item, index) => (
           <div key={index}>
             <div
-              className={`flex flex-col justify-center items-center h-48 border-[#D0D0D0] border-opacity-50 ${item.borderStyle}`}
+              className={`flex flex-col justify-center items-center h-48 border-[#D0D0D0] border-opacity-50 px-4 border-${item.borderStyle}`}
             >
               <h1 className="text-center text-[35px] lg:text-6xl font-normal">
                 {item.title}

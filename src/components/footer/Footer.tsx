@@ -46,7 +46,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-col-reverse md:flex-row justify-center pt-8">
         <ul className="flex justify-center md:justify-start">
-          <li className="text-white text-sm">
+          <li className="text-white text-sm text-center px-3">
             Copyright © 2025 Momatstudio IT Solutions. All rights reserved.
           </li>
         </ul>

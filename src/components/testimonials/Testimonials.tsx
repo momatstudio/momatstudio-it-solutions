@@ -23,15 +23,15 @@ export default function Testimonials({ testimonies }: TestimoniesProps) {
       <Spacer />
       <h1 className="text-center">TESTIMONIALS</h1>
       <Spacer />
-      <Spacer />
-      <div className="grid lg:grid-cols-3 gap-4">
+      <div className="grid lg:grid-cols-3 gap-8 lg:gap-4">
         {testimonies.map((item, index) => (
           <Testimony key={index} item={item} />
         ))}
       </div>
-      <Spacer />
-      <Spacer />
-      <Line darkTheme={true} height={1} width={"100%"} />
+      <Spacer size={40} />
+      <div className="hidden lg:block">
+        <Line darkTheme={true} height={1} width={"100%"} />
+      </div>
       <Spacer />
       <Stats />
     </div>

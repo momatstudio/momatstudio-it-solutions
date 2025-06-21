@@ -38,7 +38,6 @@ export default function Home() {
         <Containers />
       </div>
       <Spacer size={60} />
-
       <div>
         <Banner
           smallTitle={servicesSummary[1].smallTitle}
@@ -86,21 +85,22 @@ export default function Home() {
         imageAlt={servicesDetail[1].imageAlt}
         list={servicesDetail[1].list}
       />
-      <Spacer size={60} />
+      .
+      <Spacer size={30} />
       <div className="bg-black">
-        <Spacer size={40} />
+        <Spacer size={30} />
         <TwoSectionFullDisplayExtended
           aboutSummary={about.aboutSummary}
           aboutSections={about.aboutSections}
         />
-        <Spacer size={40} />
+        <Spacer size={30} />
       </div>
-      <Spacer size={40} />
+      <Spacer size={30} />
       <Testimonials testimonies={testimonies} />
-      <Spacer size={80} />
+      <Spacer size={60} />
       {/* Faqs */}
       <Contact />
-      <Spacer size={80} />
+      <Spacer size={60} />
       {/* <Blog /> */}
     </section>
   );
