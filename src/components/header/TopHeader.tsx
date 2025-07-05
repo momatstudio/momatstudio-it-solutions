@@ -42,17 +42,22 @@ export const TopHeader = () => {
             {
               id: 0,
               title: <FaFacebook />,
-              link: "https://facebook.com/momatstudio-it-solutions",
+              link: "https://facebook.com/matthews.modika",
             },
-            { id: 1, title: <FaXTwitter />, link: "https://x.com/momatstudio" },
+            {
+              id: 1,
+              title: <FaXTwitter />,
+              link: "https://x.com/matthewsmodika",
+            },
             {
               id: 3,
               title: <FaLinkedin />,
-              link: "https://linkedin.com/momatstudio",
+              link: "https://www.linkedin.com/in/mohau-maphalle-58236722a/",
             },
           ]}
           color={"white"}
           size="sm"
+          linksAreExternal={true}
         />
       </div>
       <Line darkTheme={false} height={1} width={"100%"} />
