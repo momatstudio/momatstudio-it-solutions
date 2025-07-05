@@ -192,27 +192,27 @@ export const testimonies = [
     companyName: "KINGUNK LTD PTY",
     title: "",
     description:
-      "Our team of experienced professionals is passionate about delivering tailored website designs, seamless software installations, reliable hardware services, and eye-catching posters.",
+      "Working with Mohau was an absolute game-changer for our business. He delivered a smart, functional solution that helped streamline our internal processes and enhance client engagement. His technical skill, professionalism, and commitment to excellence are unmatched. We look forward to continuing this partnership for future projects.",
     ceoName: "Emmanuel Senyolo",
-    position: "CEO, Kingunk",
+    position: "Founder",
     ratings: 5,
   },
   {
-    companyName: "THUTOPELLE LTD PTY",
+    companyName: "J.P FURNITURE LTD PTY",
     title: "",
     description:
-      "Our team of experienced professionals is passionate about delivering tailored website designs, seamless software installations, reliable hardware services, and eye-catching posters.",
-    ceoName: "Pelle Mofukeng",
-    position: "Founder, Thutopelle",
+      "Mohau built a custom mobile application for our furniture business that completely transformed how we manage orders, payments, and client communication. The app is user-friendly, visually appealing, and packed with features tailored exactly to our needs. We’re beyond satisfied with the results.",
+    ceoName: "PHILLIMON MOKOENA",
+    position: "CEO",
     ratings: 5,
   },
   {
-    companyName: "RAMAKOLO COMMUNICATIONS LTD PTY",
+    companyName: "ITUWELLNESS SOLUTIONS LTD PTY",
     title: "",
     description:
-      "Our team of experienced professionals is passionate about delivering tailored website designs, seamless software installations, reliable hardware services, and eye-catching posters.",
+      "We approached Mohau with a vision for a wellness application that could organize funding applications and track our team's impact. What we received was far beyond expectations — a powerful, intuitive dashboard that now serves as the backbone of our operations. Thank you for your exceptional work.",
     ceoName: "Thabang Leshabang",
-    position: "Manager, Ramakolo",
+    position: "Director",
     ratings: 5,
   },
 ];
