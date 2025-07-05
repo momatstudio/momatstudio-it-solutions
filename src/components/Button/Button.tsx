@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 interface ButtonProps {
   link: string;
@@ -26,8 +27,10 @@ function Button({
 }: ButtonProps) {
   const [hoverActive, setHoverActive] = useState(false);
   return (
-    <Link
-      href={link}
+    <ScrollLink
+      to={link}
+      smooth={true}
+      duration={500}
       onMouseEnter={() => setHoverActive(true)}
       onMouseLeave={() => setHoverActive(false)}
       className={` ${className} max-w-fit`}
@@ -45,7 +48,7 @@ function Button({
       >
         {name}
       </button>
-    </Link>
+    </ScrollLink>
   );
 }
 

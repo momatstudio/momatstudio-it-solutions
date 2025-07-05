@@ -50,7 +50,10 @@ const Cover = () => {
   const filteredInfo = slideInfo.filter((item) => item.id === count);
 
   return (
-    <div className="flex justify-center items-center h-screen overflow-hidden">
+    <div
+      id="cover"
+      className="flex justify-center items-center h-screen overflow-hidden"
+    >
       {filteredInfo.map((item, index) => (
         <SingleCover key={index} item={item} />
       ))}

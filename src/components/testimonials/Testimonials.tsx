@@ -15,15 +15,16 @@ interface TestimonyProps {
 
 interface TestimoniesProps {
   testimonies: TestimonyProps[];
+  id?: string;
 }
 
-export default function Testimonials({ testimonies }: TestimoniesProps) {
+export default function Testimonials({ testimonies, id }: TestimoniesProps) {
   return (
-    <div className="px-4 lg:px-28">
+    <div id={id} className="px-4 lg:px-28">
       <Spacer />
       <h1 className="text-center">TESTIMONIALS</h1>
       <Spacer />
-      <div className="grid lg:grid-cols-3 gap-8 lg:gap-4">
+      <div className="grid lg:grid-cols-3 gap-8 lg:gap-9">
         {testimonies.map((item, index) => (
           <Testimony key={index} item={item} />
         ))}

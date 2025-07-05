@@ -13,13 +13,18 @@ interface Props {
     title: string;
     description: string;
   }[];
+  id?: string;
 }
 export default function TwoSectionFullDisplayExtended({
   aboutSummary,
   aboutSections,
+  id,
 }: Props) {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between bg-black">
+    <div
+      id={id ? id : ""}
+      className="flex flex-col lg:flex-row items-center justify-between bg-black"
+    >
       <div className="lg:pl-28 pb-28 lg:pb-0 lg:pr-6 px-4 lg:w-[50%]">
         <TitleAndDescription
           textCenter={true}

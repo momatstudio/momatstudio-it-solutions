@@ -16,6 +16,7 @@ import Containers from "@/components/containers/Containers";
 import Testimonials from "@/components/testimonials/Testimonials";
 // import Blog from "@/components/blog/Blog";
 import Contact from "@/components/contact/Contact";
+import Call from "@/components/call/Call";
 
 export const metadata: Metadata = {
   title: generaInfo.title,
@@ -28,11 +29,13 @@ export default function Home() {
   return (
     <section className="mx-auto">
       <Cover />
-      <Spacer size={60} />
+      {/* OUR SERVICES */}
+      <Spacer size={60} id="services" />
       <div>
         <Banner
           mediumTitle={servicesSummary[0].mediumTitle}
           description={servicesSummary[0].description}
+          // id="services"
         />
         <Spacer size={60} />
         <Containers />
@@ -86,21 +89,24 @@ export default function Home() {
         list={servicesDetail[1].list}
       />
       .
-      <Spacer size={30} />
+      <Spacer size={30} id="about-us" />
       <div className="bg-black">
+        {/* ABOUT US */}
         <Spacer size={30} />
+
         <TwoSectionFullDisplayExtended
           aboutSummary={about.aboutSummary}
           aboutSections={about.aboutSections}
         />
         <Spacer size={30} />
       </div>
-      <Spacer size={30} />
+      <Spacer size={30} id="testimonials" />
       <Testimonials testimonies={testimonies} />
-      <Spacer size={60} />
+      <Spacer size={60} id="contact-us" />
       {/* Faqs */}
       <Contact />
       <Spacer size={60} />
+      <Call />
       {/* <Blog /> */}
     </section>
   );

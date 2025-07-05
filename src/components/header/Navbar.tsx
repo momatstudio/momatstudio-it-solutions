@@ -8,7 +8,7 @@ import { navList } from "@/utils/data";
 import Button from "../Button/Button";
 import { colors } from "@/utils/styles";
 import { GiHamburgerMenu } from "react-icons/gi";
-import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 
 interface Props {
   scrolled: boolean;
@@ -18,14 +18,14 @@ export const Navbar = ({ scrolled }: Props) => {
   return (
     <div className="flex items-center justify-between py-2 h-16">
       {/* 1. logo */}
-      <Link href="/">
+      <ScrollLink to="cover" smooth={true} duration={500}>
         <Image
           src={scrolled === false ? logoLight : logoDark}
-          className="lg:w-40"
+          className="lg:w-40 cursor-pointer"
           alt="momatstudio logo"
           priority
         />
-      </Link>
+      </ScrollLink>
       {/* 2. Nav links */}
       <div className="hidden lg:flex items-center">
         <Nav
@@ -48,7 +48,7 @@ export const Navbar = ({ scrolled }: Props) => {
 
         <Button
           className="hidden md:block"
-          link="get-qoute"
+          link="contact-us"
           name="Get Qoute"
           textColor={colors.blackLight}
           bgColor={scrolled ? colors.yellow : colors.white}

@@ -1,5 +1,6 @@
-import Link from "next/link";
+"use client";
 import React, { JSX } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 interface navItem {
   id: number;
@@ -22,7 +23,9 @@ export default function Nav({ navList, color, size }: NavProps) {
     >
       {navList.map((item, index) => (
         <li key={index} className={`text-${size} hover:text-[#FFDF01]`}>
-          <Link href={item.link}>{item.title}</Link>
+          <ScrollLink to={item.link} smooth={true} duration={500}>
+            {item.title}
+          </ScrollLink>
         </li>
       ))}
     </ul>

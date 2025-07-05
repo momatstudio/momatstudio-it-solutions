@@ -5,9 +5,12 @@ import { colors } from "@/utils/styles";
 import { contact, generaInfo } from "@/utils/data";
 import { FaLocationDot } from "react-icons/fa6";
 
-export default function Contact() {
+interface ContactProps {
+  id?: string;
+}
+export default function Contact({ id }: ContactProps) {
   return (
-    <div className="px-4 lg:px-28">
+    <div id={id} className="px-4 lg:px-28">
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="">
           <div className="text-center lg:text-start">
@@ -41,22 +44,40 @@ export default function Contact() {
             {/* <h4>SAY SOMETHING</h4> */}
             <input
               type="text"
-              placeholder="Enter full names"
+              placeholder="Enter your name"
               name="name"
               className="border p-3 rounded-full"
+              required
             />
             <input
               type="email"
               placeholder="Enter email address"
               name="email"
               className="border p-3 rounded-full"
+              required
             />
             <input
               type="number"
               placeholder="Enter phone number"
               name="number"
               className="border p-3 rounded-full"
+              required
             />
+            <select
+              name="service"
+              className="border p-3 rounded-full text-gray-400"
+              required
+            >
+              <option value="" disabled>
+                Select a service
+              </option>
+
+              <option value="Website Design">Website Design</option>
+              <option value="Software Development">Software Development</option>
+              <option value="Hardware Services">Hardware Services</option>
+              <option value="Poster Design">Poster Design</option>
+              <option value="Website Design">General</option>
+            </select>
             <textarea
               placeholder="Type your message here"
               name="message"

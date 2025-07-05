@@ -9,6 +9,7 @@ interface BannerProps {
   buttonLink?: string;
   buttonName?: string;
   textColor?: string;
+  id?: string;
 }
 const Banner: React.FC<BannerProps> = ({
   smallTitle,
@@ -17,9 +18,11 @@ const Banner: React.FC<BannerProps> = ({
   buttonLink,
   buttonName,
   textColor,
+  id,
 }) => {
   return (
     <div
+      id={id ? id : ""}
       className="flex flex-col md:flex-row px-4 lg:px-28"
       style={{ color: textColor }}
     >
