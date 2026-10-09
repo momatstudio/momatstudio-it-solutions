@@ -19,36 +19,48 @@ const services = [
     title: "Websites & web applications",
     description:
       "Fast, responsive websites and web applications built around your brand, customers and business goals.",
+    image: "/service-web-apps.webp",
+    imageAlt: "Responsive website displayed across desktop, tablet and mobile devices",
   },
   {
     icon: FiLayers,
     title: "Business management systems",
     description:
       "Purpose-built portals for operations, customers, inventory, orders, bookings and everyday workflows.",
+    image: "/service-business-systems.webp",
+    imageAlt: "Connected business management dashboard and workflow modules",
   },
   {
     icon: FiBookOpen,
     title: "LMS & e-learning platforms",
     description:
       "Accessible learning platforms that organise courses, students, assessments, progress and reporting.",
+    image: "/service-lms.webp",
+    imageAlt: "Learning management platform with courses, students and progress tracking",
   },
   {
     icon: FiSmartphone,
     title: "Mobile apps & dashboards",
     description:
       "Practical mobile experiences and clear dashboards that put the right information in the right hands.",
+    image: "/service-mobile-dashboards.webp",
+    imageAlt: "Mobile application alongside a modern analytics dashboard",
   },
   {
     icon: FiArrowUpRight,
     title: "Integrations & reporting",
     description:
       "Connect tools, remove repetitive work and turn operational data into useful, decision-ready reports.",
+    image: "/service-integrations.webp",
+    imageAlt: "Connected software integrations flowing through a central data hub",
   },
   {
     icon: FiLifeBuoy,
     title: "Support & improvement",
     description:
       "Reliable maintenance, enhancements and technical guidance that keep your digital systems working well.",
+    image: "/service-support.webp",
+    imageAlt: "Secure cloud platform with monitoring and maintenance tools",
   },
 ];
 
@@ -129,11 +141,25 @@ export default function Home() {
           </p>
         </div>
         <div className="service-grid">
-          {services.map(({ icon: Icon, title, description }) => (
-            <article className="service-card" key={title}>
-              <div className="icon-box"><Icon aria-hidden="true" /></div>
-              <h3>{title}</h3>
-              <p>{description}</p>
+          {services.map(({ icon: Icon, title, description, image, imageAlt }) => (
+            <article
+              className="service-card"
+              key={title}
+              tabIndex={0}
+              aria-label={`${title}. Hover, focus or tap to view the service illustration.`}
+            >
+              <div className="service-card-inner">
+                <div className="service-card-face service-card-front">
+                  <div className="icon-box"><Icon aria-hidden="true" /></div>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                  <span className="flip-cue">View picture <FiArrowUpRight aria-hidden="true" /></span>
+                </div>
+                <div className="service-card-face service-card-back">
+                  <Image src={image} alt={imageAlt} fill sizes="(max-width: 650px) calc(100vw - 28px), (max-width: 980px) 50vw, 33vw" />
+                  <div className="service-card-overlay"><h3>{title}</h3><span>Tap or move away to return</span></div>
+                </div>
+              </div>
             </article>
           ))}
         </div>

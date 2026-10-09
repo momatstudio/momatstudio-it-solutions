@@ -61,9 +61,20 @@ p { color: var(--muted); }
 .section-heading p { margin-top: 20px; font-size: 1.05rem; }
 .left-heading { margin: 0; text-align: left; }
 .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.service-card { min-height: 285px; padding: 32px; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--white); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
-.service-card:hover { transform: translateY(-5px); border-color: #cfc4ff; box-shadow: var(--shadow); }
+.service-card { min-height: 330px; border-radius: var(--radius-md); perspective: 1200px; cursor: pointer; }
+.service-card-inner { position: relative; width: 100%; height: 100%; min-height: 330px; transform-style: preserve-3d; transition: transform .65s cubic-bezier(.2,.75,.25,1); }
+.service-card:hover .service-card-inner, .service-card:focus .service-card-inner, .service-card:focus-within .service-card-inner { transform: rotateY(180deg); }
+.service-card:focus-visible { outline-offset: 7px; }
+.service-card-face { position: absolute; inset: 0; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius-md); backface-visibility: hidden; -webkit-backface-visibility: hidden; box-shadow: 0 10px 34px rgba(26, 19, 63, .06); }
+.service-card-front { display: flex; flex-direction: column; padding: 32px; background: var(--white); transition: border-color .25s ease, box-shadow .25s ease; }
+.service-card:hover .service-card-front, .service-card:focus .service-card-front { border-color: #cfc4ff; box-shadow: var(--shadow); }
 .service-card h3 { margin: 26px 0 13px; }
+.service-card-back { transform: rotateY(180deg); background: var(--brand-soft); }
+.service-card-back img { object-fit: cover; }
+.service-card-overlay { position: absolute; inset: auto 0 0; z-index: 2; padding: 50px 25px 23px; color: white; background: linear-gradient(transparent, rgba(16, 13, 31, .92)); }
+.service-card-overlay h3 { margin: 0 0 4px; letter-spacing: -.025em; }
+.service-card-overlay span { color: rgba(255,255,255,.75); font-size: .76rem; }
+.flip-cue { display: inline-flex; align-items: center; gap: 7px; margin-top: auto; padding-top: 20px; color: var(--brand); font-size: .82rem; font-weight: 750; }
 .icon-box { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 15px; color: var(--brand); background: var(--brand-soft); font-size: 1.45rem; }
 .process-section { color: white; background: var(--ink); }
 .process-section p { color: #b9bac2; }
@@ -149,7 +160,7 @@ p { color: var(--muted); }
   .hero-visual { width: 145%; margin-left: -20%; }
   .hero-trust { flex-direction: column; gap: 10px; }
   .service-grid, .testimonial-grid { grid-template-columns: 1fr; }
-  .service-card { min-height: auto; }
+  .service-card, .service-card-inner { min-height: 320px; }
   .process-item { grid-template-columns: 48px 1fr; }
   .about { gap: 45px; }
   .contact { width: 100%; margin-block: 78px 0; padding: 55px 20px; border-radius: 0; }
