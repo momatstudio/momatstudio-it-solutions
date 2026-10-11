@@ -56,7 +56,7 @@ p { color: var(--muted); }
 .hero-trust span { display: inline-flex; align-items: center; gap: 7px; }
 .hero-trust svg { color: var(--brand); }
 .hero-visual { width: 150%; transform: translateX(-7%); }
-.hero-visual img { display: block; width: 100%; }
+.hero-visual img { display: block; width: 100%; -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.25) 15%, #000 38%); mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.25) 15%, #000 38%); }
 .section-heading { max-width: 720px; margin: 0 auto 54px; text-align: center; }
 .section-heading p { margin-top: 20px; font-size: 1.05rem; }
 .left-heading { margin: 0; text-align: left; }
@@ -145,6 +145,7 @@ p { color: var(--muted); }
   .mobile-nav .button { margin-top: 8px; }
   .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 80px; }
   .hero-visual { width: 120%; margin-left: -10%; transform: none; }
+  .hero-visual img { -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 24%); mask-image: linear-gradient(to bottom, transparent 0%, #000 24%); }
   .service-grid, .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
   .process-layout, .about, .contact { grid-template-columns: 1fr; gap: 55px; }
   .portrait-frame { max-width: 620px; }
